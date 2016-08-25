@@ -36,6 +36,13 @@ module TVMaze
       end
     end
 
+    def self.imdbid(imdbid,params ={})
+        params[:imdb]=imdbid.to_s.strip
+        result = TVMaze.request("/lookup/shows", params)
+        #build_search_results(result)
+        Show.new(result)
+    end
+
     def self.search(query = '', params = {})
       params[:q] = query.to_s.strip
       result = TVMaze.request('/search/shows', params)

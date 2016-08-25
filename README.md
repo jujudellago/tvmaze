@@ -3,6 +3,8 @@ TVmaze API Gem
 
 Ruby wrapper for the [TVmaze API](http://api.tvmaze.com/).
 
+Updated by julien ramel to add imdbid lookup
+
 
 ## Required gems:
 

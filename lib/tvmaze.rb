@@ -13,6 +13,8 @@ module TVMaze
       case response.code
       when 200
         response.return!(request, result, &block)
+      when 301
+        response.follow_redirection(request, result, &block)        
       when 401
         fail TVMaze::Unauthorized
       when 403
